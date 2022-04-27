@@ -113,12 +113,12 @@ namespace TP6
                                             FunListBox.Items.Add("G" + (z + 1) + "(" + x[i] + ";" + y[j] + ") = " + double.NaN);
                                             myErrorswriter.WriteLine(filename);
                                             myErrorswriter.WriteLine("NaN");
-                                            myErrorswriter.WriteLine("x = {0}, y = {1}", x[i], y[i]);
+                                            myErrorswriter.WriteLine("x = {0}, y = {1}", x[i], y[j]);
                                             myErrorswriter.WriteLine("Not finite number");
                                             myErrorswriter.WriteLine(" ");
                                         }
 
-                                        else if (y[i] == 1) // условное исключение; значение переменной, при которой происходит деление на ноль
+                                        else if (y[j] == 1) // условное исключение; значение переменной, при которой происходит деление на ноль
                                         {
                                             writer.Write(double.NaN);
                                             FunListBox.Items.Add("G" + (z + 1) + "(" + x[i] + ";" + y[j] + ") = " + double.NaN);
